@@ -102,13 +102,14 @@ body {
 /* Style the navigation bar */
 .navbar {
   width: 100%;
+  height: 50px;
   background-color: #999;
   overflow: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0px;
 }
 
@@ -142,9 +143,11 @@ body {
 
 #menuToggle {
   display: block;
-  position: relative;
-  top: 50px;
+  position: fixed;
+  top: 60px;
   left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   z-index: 1;
 
@@ -328,7 +331,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 3rem;
   // Small cards
   .cards {
@@ -409,7 +412,7 @@ button {
 .page-m {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 
   .cards-m {
@@ -427,10 +430,12 @@ button {
 
   .cards-m h4 {
     font-size: 20px;
+    color: #666;
   }
 
   .cards-m p {
     font-size: 18px;
+    color: #4d4d4d;
   }
   img {
     width: 74px;
@@ -440,7 +445,7 @@ button {
 .page-l {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 
   .cards-l {
@@ -458,10 +463,12 @@ button {
 
   .cards-l h4 {
     font-size: 26px;
+    color: #666;
   }
 
   .cards-l p {
     font-size: 22px;
+    color: #4d4d4d;
   }
   img {
     width: 94px;
@@ -471,7 +478,7 @@ button {
 .page-xl {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 
   .cards-xl {
@@ -489,10 +496,12 @@ button {
 
   .cards-xl h4 {
     font-size: 36px;
+    color: #666;
   }
 
   .cards-xl p {
     font-size: 30px;
+    color: #4d4d4d;
   }
   .cards-xl img {
     width: 134px;

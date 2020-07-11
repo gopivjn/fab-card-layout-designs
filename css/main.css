@@ -90,13 +90,14 @@ body {
 /* Style the navigation bar */
 .navbar {
   width: 100%;
+  height: 50px;
   background-color: #999;
   overflow: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 0px;
 }
 
@@ -128,9 +129,11 @@ body {
 
 #menuToggle {
   display: block;
-  position: relative;
-  top: 50px;
+  position: fixed;
+  top: 60px;
   left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   z-index: 1;
   user-select: none;
 }
@@ -301,7 +304,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 3rem;
 }
 
@@ -380,7 +383,7 @@ button {
 .page-m {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 }
 
@@ -399,10 +402,12 @@ button {
 
 .page-m .cards-m h4 {
   font-size: 20px;
+  color: #666;
 }
 
 .page-m .cards-m p {
   font-size: 18px;
+  color: #4d4d4d;
 }
 
 .page-m img {
@@ -412,7 +417,7 @@ button {
 .page-l {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 }
 
@@ -431,10 +436,12 @@ button {
 
 .page-l .cards-l h4 {
   font-size: 26px;
+  color: #666;
 }
 
 .page-l .cards-l p {
   font-size: 22px;
+  color: #4d4d4d;
 }
 
 .page-l img {
@@ -444,7 +451,7 @@ button {
 .page-xl {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 2rem;
+  margin-left: 6rem;
   margin-top: 50rem;
 }
 
@@ -463,10 +470,12 @@ button {
 
 .page-xl .cards-xl h4 {
   font-size: 36px;
+  color: #666;
 }
 
 .page-xl .cards-xl p {
   font-size: 30px;
+  color: #4d4d4d;
 }
 
 .page-xl .cards-xl img {
