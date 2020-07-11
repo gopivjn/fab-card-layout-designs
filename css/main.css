@@ -351,6 +351,15 @@ button {
   width: 54px;
 }
 
+#lay1s .layout2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+#lay1s .layout2 img {
+  margin: 5px 5px;
+}
+
 .page-m {
   display: flex;
   flex-wrap: wrap;
