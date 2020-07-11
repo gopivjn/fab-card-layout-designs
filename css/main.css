@@ -98,7 +98,6 @@ body {
   position: fixed;
   z-index: 1;
   top: 0px;
-  margin: 0 auto;
 }
 
 /* Navbar links */
@@ -109,6 +108,8 @@ body {
   color: #333;
   text-decoration: none;
   font-size: 16px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .navbar h3 {
@@ -122,12 +123,7 @@ body {
 
 /* Navbar links on mouse-over */
 .navbar a:hover {
-  background-color: #000;
-}
-
-/* Current/active navbar link */
-.active {
-  background-color: #4caf50;
+  background-color: #999;
 }
 
 #menuToggle {
@@ -218,9 +214,9 @@ body {
  * at the top left of the screen
  */
 #menu {
-  position: absolute;
-  width: 300px;
-  height: auto;
+  position: fixed;
+  width: 200px;
+  height: 100vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -248,6 +244,17 @@ body {
  */
 #menuToggle input:checked ~ ul {
   transform: none;
+  position: fixed;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
 }
 
 .sidenav {
@@ -309,6 +316,17 @@ button {
   margin: 20px 12px;
   padding: 20px;
   cursor: pointer;
+}
+
+.page .cards-style1 {
+  border-top: 3px solid steelblue;
+  border-top-right-radius: 15px;
+}
+
+.page .cards-style2 {
+  border-top: 3px solid goldenrod;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 .page .cards:hover {
