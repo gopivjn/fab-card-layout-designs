@@ -351,13 +351,30 @@ button {
   width: 54px;
 }
 
+#lay3s img {
+  padding-top: 1rem;
+}
+
+#lay3s p {
+  padding-top: 1rem;
+}
+
 #lay1s .layout2 {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.5fr;
 }
 
 #lay1s .layout2 img {
   margin: 5px 5px;
+}
+
+.py1 {
+  padding-top: 5px;
+}
+
+.py2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .page-m {
