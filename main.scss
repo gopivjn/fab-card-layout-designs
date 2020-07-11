@@ -1,3 +1,9 @@
+$bgmain-color: #eef1f4;
+$bg-secondary: #999;
+$bg-darkmode-color: #333;
+$card-bg: #fff;
+$card-bg-dark: #424242;
+
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 html {
@@ -12,7 +18,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #eef1f4;
+  background: $bgmain-color;
 }
 
 .container {
@@ -153,7 +159,6 @@ body {
 #menuToggle a {
   text-decoration: none;
   color: #232323;
-
   transition: color 0.3s ease;
 }
 
@@ -255,10 +260,12 @@ body {
 }
 
 #menu li {
-  display: flex;
-  flex-direction: column;
   padding: 10px 0;
   font-size: 22px;
+}
+#menu li.tab {
+  padding-left: 15px;
+  font-size: 16px;
 }
 
 /*
@@ -295,7 +302,7 @@ body {
   font-size: 14px;
   color: #555;
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 5rem;
 }
 
 .sidenav a:hover {
@@ -330,7 +337,15 @@ button {
     border-radius: 3px;
     margin: 20px 12px;
     padding: 20px;
+    cursor: pointer;
   }
+
+  .cards:hover {
+    transform: translateY(0) scale(1.002) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+      0 24px 46px rgba(236, 100, 100, 0.11);
+  }
+
   .cards h4 {
     font-weight: 700;
     font-size: 15px;

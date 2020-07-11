@@ -234,10 +234,13 @@ body {
 }
 
 #menu li {
-  display: flex;
-  flex-direction: column;
   padding: 10px 0;
   font-size: 22px;
+}
+
+#menu li.tab {
+  padding-left: 15px;
+  font-size: 16px;
 }
 
 /*
@@ -272,7 +275,7 @@ body {
   font-size: 14px;
   color: #555;
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 5rem;
 }
 
 .sidenav a:hover {
@@ -305,6 +308,12 @@ button {
   border-radius: 3px;
   margin: 20px 12px;
   padding: 20px;
+  cursor: pointer;
+}
+
+.page .cards:hover {
+  transform: translateY(0) scale(1.002) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(236, 100, 100, 0.11);
 }
 
 .page .cards h4 {
