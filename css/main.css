@@ -40,6 +40,21 @@ body {
   color: #999;
 }
 
+.dark-mode .flip-card-front {
+  background-color: #424242;
+  color: #fff;
+  padding: 40px;
+}
+
+.dark-mode .flip-card-back {
+  background-color: white;
+  color: #999;
+}
+
+.dark-mode .flip-card-back p {
+  border: 1px solid #333;
+}
+
 .dark-mode .sidenav {
   background-color: #424242;
 }
@@ -89,27 +104,39 @@ body {
 
 /* Style the navigation bar */
 .navbar {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 50px;
   background-color: #999;
   overflow: auto;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  z-index: 10;
+}
+
+.box {
+  display: flex;
+  width: 400px;
+  margin-left: 4rem;
+  justify-content: flex-start;
+}
+
+.box2 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 10;
-  top: 0px;
+  width: 100%;
 }
 
 /* Navbar links */
 .navbar a {
   float: left;
   text-align: center;
-  padding: 12px;
+  padding: 0 12px;
   color: #333;
   text-decoration: none;
   font-size: 16px;
-  margin-left: 2rem;
   margin-right: 2rem;
 }
 
@@ -130,7 +157,7 @@ body {
 #menuToggle {
   display: block;
   position: fixed;
-  top: 60px;
+  top: 5px;
   left: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -233,12 +260,10 @@ body {
 }
 
 #menu li {
-  padding: 10px 0;
   font-size: 22px;
 }
 
 #menu li.tab {
-  padding-left: 15px;
   font-size: 16px;
 }
 
@@ -292,6 +317,71 @@ body {
   color: #f1f1f1;
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 329px;
+  height: 200px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  margin: 20px 12px;
+  align-items: center;
+}
+
+.flip-card img {
+  width: 54px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: #999;
+  padding: 40px;
+}
+
+.flip-card-front h4 {
+  padding-top: 20px;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #424242;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+
+.flip-card-back p {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 24px;
+  font-size: 15px;
+}
+
 button {
   background-color: #999;
   color: #333;
@@ -304,7 +394,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 6rem;
+  margin-left: 1rem;
   margin-top: 3rem;
 }
 
@@ -322,12 +412,24 @@ button {
 }
 
 .page .cards-style1 {
-  border-top: 3px solid steelblue;
+  border-top: 3px solid #1b6ca8;
   border-top-right-radius: 15px;
 }
 
 .page .cards-style2 {
   border-top: 3px solid goldenrod;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.page .cards-style3 {
+  border-top: 3px solid #5fdde5;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.page .cards-style4 {
+  border-top: 3px solid #5c2a9d;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
@@ -345,9 +447,10 @@ button {
 }
 
 .page .cards p {
-  font-size: 13px;
+  font-size: 15px;
   padding-bottom: 20px;
   color: #4d4d4d;
+  line-height: 1.5;
 }
 
 .page img {
@@ -383,7 +486,7 @@ button {
 .page-m {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 6rem;
+  margin-left: 1rem;
   margin-top: 50rem;
 }
 
@@ -417,7 +520,7 @@ button {
 .page-l {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 6rem;
+  margin-left: 1rem;
   margin-top: 50rem;
 }
 
@@ -451,7 +554,7 @@ button {
 .page-xl {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 6rem;
+  margin-left: 1rem;
   margin-top: 50rem;
 }
 
@@ -483,10 +586,39 @@ button {
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
+@media only screen and (max-width: 768px) {
+  .box span,
+  .box2 span {
+    display: none;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .box span,
+  .box2 span {
+    display: none;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #lay1s .cards {
+    width: 100%;
+  }
+  .box span,
+  .box2 span {
+    display: none;
+    width: auto;
+  }
+  i {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #lay1s .cards {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
