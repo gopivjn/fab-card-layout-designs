@@ -24,6 +24,18 @@ body {
   background-color: #333;
 }
 
+.dark-mode #lay1s .medialayout {
+  background-color: #424242;
+}
+
+.dark-mode #lay1s .medialayout p {
+  color: #fff;
+}
+
+.dark-mode #lay1s .medialayout h4 {
+  color: #fff;
+}
+
 .dark-mode .seperator {
   border: 1px solid #999;
 }
@@ -53,6 +65,7 @@ body {
 
 .dark-mode .flip-card-back p {
   border: 1px solid #333;
+  line-height: 1.5;
 }
 
 .dark-mode .sidenav {
@@ -144,7 +157,7 @@ body {
   color: #333;
   text-decoration: none;
   font-size: 14px;
-  font-family: Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0 5rem;
   text-transform: uppercase;
 }
@@ -323,7 +336,7 @@ body {
   height: 200px;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
-  margin: 20px 12px;
+  margin: 12px;
   align-items: center;
 }
 
@@ -378,8 +391,9 @@ body {
 .flip-card-back p {
   border: 1px solid white;
   border-radius: 2px;
-  padding: 24px;
+  padding: 18px;
   font-size: 15px;
+  line-height: 1.5;
 }
 
 button {
@@ -393,9 +407,8 @@ button {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  margin-top: 5rem;
   margin-left: 1rem;
-  margin-top: 3rem;
 }
 
 .page .cards {
@@ -406,7 +419,7 @@ button {
   background-color: white;
   box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  margin: 20px 12px;
+  margin: 12px;
   padding: 20px;
   cursor: pointer;
 }
@@ -455,6 +468,51 @@ button {
 
 .page img {
   width: 54px;
+}
+
+.media img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+#lay1s .medialayout {
+  display: flex;
+  flex-direction: column;
+  max-width: 329px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.medialayout:hover {
+  transform: translateY(0) scale(1.05) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(236, 100, 100, 0.11);
+}
+
+#myVideo {
+  width: 329px;
+}
+
+#lay1s .m-content {
+  padding: 20px;
+}
+
+#lay1s .m-content h4 {
+  font-weight: 700;
+  font-size: 15px;
+  padding: 10px 0px;
+  color: #666;
+}
+
+#lay1s .m-content p {
+  font-size: 15px;
+  padding-bottom: 20px;
+  color: #4d4d4d;
+  line-height: 1.5;
 }
 
 #lay3s img {
@@ -616,9 +674,107 @@ button {
   }
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
   #lay1s .cards {
-    width: 100%;
+    width: auto;
   }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .card {
+  position: relative;
+  cursor: pointer;
+  padding-top: 10rem;
+  margin-left: 1.8rem;
+}
+
+.container .card .face {
+  width: 329px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+  background: steelblue;
+  transform: translateY(0);
+}
+
+.container .card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content img {
+  max-width: 100px;
+}
+
+.container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.container .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #343234;
+  padding: 5px;
+  border: 1px solid #343234;
+}
+
+.container .card .face.face2 .content a:hover {
+  background: #333;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
