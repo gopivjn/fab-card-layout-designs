@@ -129,10 +129,43 @@ body {
   z-index: 10;
 }
 
+.navbar2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #555;
+  overflow: auto;
+  position: fixed;
+  top: 50px;
+  padding: 0 30px;
+  z-index: 2;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 40px;
+  justify-content: space-evenly;
+}
+
+.sub-menu {
+  border-right: 1px solid #999;
+  margin: 2px;
+  padding: 5px;
+}
+
 .box {
   display: flex;
   width: 400px;
   margin-left: 4rem;
+  margin-right: 10rem;
   justify-content: flex-start;
 }
 
@@ -140,6 +173,16 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.box2 h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #424242;
+}
+
+.box2 h6 span {
+  font-size: 0.8rem;
 }
 
 /* Navbar links */
@@ -472,7 +515,6 @@ button {
 
 .media img {
   width: 100%;
-  height: 100px;
   object-fit: cover;
 }
 
@@ -545,7 +587,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin-left: 1rem;
-  margin-top: 50rem;
+  margin-top: 10rem;
 }
 
 .page-m .cards-m {
@@ -579,7 +621,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin-left: 1rem;
-  margin-top: 50rem;
+  margin-top: 10rem;
 }
 
 .page-l .cards-l {
@@ -613,7 +655,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   margin-left: 1rem;
-  margin-top: 50rem;
+  margin-top: 10rem;
 }
 
 .page-xl .cards-xl {
@@ -650,6 +692,10 @@ button {
     display: none;
     width: auto;
   }
+}
+
+.box {
+  margin-right: 4rem;
 }
 
 @media only screen and (max-width: 550px) {
