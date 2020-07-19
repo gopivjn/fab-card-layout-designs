@@ -259,7 +259,8 @@ body {
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 #menuToggle span:first-child {
@@ -492,7 +493,8 @@ button {
 
 .page .cards:hover {
   transform: translateY(0) scale(1.002) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(236, 100, 100, 0.11);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px rgba(236, 100, 100, 0.11);
 }
 
 .page .cards h4 {
@@ -532,7 +534,8 @@ button {
 
 .medialayout:hover {
   transform: translateY(0) scale(1.05) translateZ(0);
-  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px rgba(236, 100, 100, 0.11);
+  box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11),
+    0 24px 46px rgba(236, 100, 100, 0.11);
 }
 
 #myVideo {
@@ -753,7 +756,7 @@ body {
 
 .container .card .face.face1 {
   position: relative;
-  background: #333;
+  background: #555;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -824,3 +827,234 @@ body {
   color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
+
+/* Hover effect side slide */
+
+.container2 {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 400px;
+  margin: 160px;
+}
+.container2 .cardd {
+  position: relative;
+  height: 250px;
+  background-color: #ffffff;
+  display: flex;
+  width: 45%;
+  margin: 30px 60px;
+}
+.container2 .cardd .img-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.container2 .cardd:hover .img-box {
+  width: 150px;
+  height: 150px;
+  left: -140px;
+  top: calc(75% - 50%);
+  /* top: ca;    */
+  transition: 0.5s ease-in-out;
+  background-color: steelblue;
+}
+.container2 .cardd .img-box ::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-style: 6em;
+  color: rgb(255, 255, 255, 0.05);
+  font-weight: 700;
+}
+.container2 .cardd .img-box img {
+  max-width: 100px;
+  transition: 0.5s ease-in-out;
+}
+.container2 .cardd:hover .img-box img {
+  max-width: 75px;
+}
+.container2 .cardd .content {
+  position: absolute;
+  right: 0;
+  width: calc(100% -75px);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container2 .cardd .content h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.container2 .cardd .content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333333;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (max-width: 992px) {
+  .container2 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container2 .cardd {
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .container2 {
+    max-width: 300px;
+  }
+  .container2 .cardd .img-box {
+    position: relative;
+  }
+  .container2 .cardd .img-box,
+  .container2 .cardd:hover .img-box {
+    width: 100%;
+    height: 200px;
+    left: 0;
+  }
+  .container2 .cardd .img-box,
+  .container2 .cardd:hover .img-box {
+    max-width: 100%;
+  }
+  .container2 .cardd .content {
+    position: relative;
+    width: 100%;
+  }
+}
+
+/* 3d flip card box backwards */
+
+.main-page2 {
+  padding-bottom: 200px;
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .card {
+  position: relative;
+  width: 329px;
+  height: 200px;
+}
+
+.container .card .face3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container .card .face3.face4 {
+  background: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+.container .card .face3.face4 img {
+  max-width: 100px;
+}
+
+.container .card .face3.face4 h3 {
+  margin: 10px 0 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container .card:hover .face3.face4 {
+  transform: translateY(-100%) rotateX(90deg);
+}
+
+.container .card:hover .face3.face4 {
+  transform: translateY(-100%) rotateX(90deg);
+  background: steelblue;
+}
+
+.container .card .face3.face4 .content {
+  opacity: 0.2;
+  transition: 0.5s;
+}
+
+/* .container .card:hover .face3.face4 .content {
+  opacity: 1;
+} */
+
+.container .card .face3.face4 .content img {
+  max-width: 100px;
+}
+
+.container .card .face3.face4 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+.container .card .face3.face5 {
+  /* position: relative; */
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); */
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face3.face5 {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.container .card .face3.face5 .content p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.container .card .face3.face5 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #343234;
+  padding: 5px;
+  border: 1px solid #343234;
+}
+
+/* .container .card .face3.face5 .content a:hover {
+  background: #333;
+  color: #fff;
+} */
