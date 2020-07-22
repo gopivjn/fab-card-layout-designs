@@ -142,7 +142,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 35px;
   background-color: #555;
   overflow: auto;
   position: fixed;
@@ -472,13 +472,15 @@ button {
   border: none;
 }
 
+.main-content {
+  margin: 14px;
+}
 .page {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5rem;
+  margin-top: 99px;
 
-  margin-left: 1rem;
   // Small cards
   .cards {
     display: flex;
@@ -612,20 +614,18 @@ button {
 .page-m {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1rem;
-  margin-top: 10rem;
+  margin-top: 99px;
 
   .cards-m {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 1.2rem;
     max-width: 500px;
     height: auto;
     background-color: white;
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 25px;
+    margin: 12px;
+    padding: 32px;
   }
 
   .cards-m h4 {
@@ -645,29 +645,27 @@ button {
 .page-l {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1rem;
-  margin-top: 10rem;
+  margin-top: 99px;
 
   .cards-l {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1.2rem;
     max-width: 720px;
     height: auto;
     background-color: white;
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 30px;
+    margin: 12px;
+    padding: 36px;
   }
 
   .cards-l h4 {
-    font-size: 26px;
+    font-size: 24px;
     color: #666;
   }
 
   .cards-l p {
-    font-size: 22px;
+    font-size: 19px;
     color: #4d4d4d;
   }
   img {
@@ -678,20 +676,18 @@ button {
 .page-xl {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 1rem;
-  margin-top: 10rem;
+  margin-top: 99px;
 
   .cards-xl {
     display: grid;
-    grid-gap: 2.5rem;
+    grid-gap: 1.2rem;
     width: 1020px;
     height: auto;
     background-color: white;
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 35px;
+    margin: 12px;
+    padding: 32px;
   }
 
   .cards-xl h4 {
