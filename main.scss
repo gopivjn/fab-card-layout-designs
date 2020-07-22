@@ -102,20 +102,50 @@ body {
 
   .page-m {
     .cards-m {
-      border: #999 1px solid;
-      border-radius: 6px;
+      // border: #999 1px solid;
+      // border-radius: 6px;
+      background-color: #424242;
+    }
+    .cards-m h4 {
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .cards-m p {
+      color: #fff;
+      opacity: 0.7;
     }
   }
   .page-l {
     .cards-l {
-      border: #999 1px solid;
-      border-radius: 6px;
+      // border: #999 1px solid;
+      // border-radius: 6px;
+      background-color: #424242;
+    }
+    .cards-l h4 {
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .cards-l p {
+      color: #fff;
+      opacity: 0.7;
     }
   }
   .page-xl {
     .cards-xl {
-      border: #999 1px solid;
-      border-radius: 6px;
+      // border: #999 1px solid;
+      // border-radius: 6px;
+      background-color: #424242;
+    }
+    .cards-xl h4 {
+      color: #fff;
+      font-weight: 400;
+    }
+
+    .cards-xl p {
+      color: #fff;
+      opacity: 0.7;
     }
   }
   button {
@@ -140,9 +170,10 @@ body {
 
 .navbar2 {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  height: 35px;
+  height: auto;
   background-color: #555;
   overflow: auto;
   position: fixed;
@@ -625,7 +656,7 @@ button {
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     margin: 12px;
-    padding: 32px;
+    padding: 2rem;
   }
 
   .cards-m h4 {
@@ -636,6 +667,7 @@ button {
   .cards-m p {
     font-size: 18px;
     color: #4d4d4d;
+    line-height: 1.5;
   }
   img {
     width: 74px;
@@ -650,13 +682,13 @@ button {
   .cards-l {
     display: grid;
     grid-gap: 1.2rem;
-    max-width: 720px;
+    max-width: 682px;
     height: auto;
     background-color: white;
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     margin: 12px;
-    padding: 36px;
+    padding: 2rem;
   }
 
   .cards-l h4 {
@@ -667,6 +699,7 @@ button {
   .cards-l p {
     font-size: 19px;
     color: #4d4d4d;
+    line-height: 1.5;
   }
   img {
     width: 94px;
@@ -687,7 +720,7 @@ button {
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     margin: 12px;
-    padding: 32px;
+    padding: 2rem;
   }
 
   .cards-xl h4 {
@@ -698,6 +731,7 @@ button {
   .cards-xl p {
     font-size: 30px;
     color: #4d4d4d;
+    line-height: 1.5;
   }
   .cards-xl img {
     width: 134px;
@@ -728,12 +762,15 @@ button {
       width: auto;
     }
   }
+  .page .cards {
+    max-width: 100%;
+  }
+  .page {
+    margin-top: 10rem;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-  #lay1s .cards {
-    width: 100%;
-  }
   .box,
   .box2 {
     span {
@@ -745,11 +782,17 @@ button {
   i {
     font-size: 30px;
   }
+  .page .cards {
+    max-width: 100%;
+  }
 }
 
 @media only screen and (max-width: 375px) {
   #lay1s .cards {
     width: auto;
+  }
+  .page {
+    margin-top: 10rem;
   }
 }
 
